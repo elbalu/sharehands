@@ -7,8 +7,8 @@ var user = new UserModel ("balu", "badri");
 dummyUsers = [
 	{
 		id : '1',
-		firstName : 'Abilash',
-		lastName : 'badri',
+		name : 'Abilash',
+		orgname : null,
 		email : 'Abilash@gmail.com',
 		phone : '4089312225',
 		accountType : 'personal',
@@ -16,8 +16,8 @@ dummyUsers = [
 	},
 	{
 		id : '2',
-		firstName : 'balu',
-		lastName : 'temp',
+		name : 'balu',
+		orgname : null,
 		email : 'asd@gmail.com',
 		phone : '4089312225',
 		accountType : 'personal',
@@ -25,8 +25,8 @@ dummyUsers = [
 	},
 	{
 		id : '3',
-		firstName : 'Ramesh',
-		lastName : 'v',
+		name : 'Ramesh',
+		orgname : 'Lingams charity',
 		email : 'ramesgh@gmail.com',
 		phone : '4089312225',
 		accountType : 'org',

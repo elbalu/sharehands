@@ -4,15 +4,15 @@
   <input type="hidden" name="student" value="student"/>
   <div class="form-group">
     <label for="stuName">Name</label>
-    <input type="text" class="form-control" id="stuName" placeholder="Enter stu name">
+    <input type="text" class="form-control" id="stuName" name="name" placeholder="Enter stu name">
   </div>
   <div class="form-group">
     <label for="stuEmail">Email address</label>
-    <input type="email" class="form-control" id="stuemail" placeholder="Enter email">
+    <input type="email" class="form-control" id="stuemail" name="email"  placeholder="Enter email">
   </div>
   <div class="form-group">
     <label for="stuPassword">Password</label>
-    <input type="password" class="form-control" id="stuPassword" placeholder="Enter password">
+    <input type="password" class="form-control" id="stuPassword" name="password" placeholder="Enter password">
   </div>
 	  <button type="submit" class="btn btn-primary btn-lg btn-block">Register as Student</button>
 </form>

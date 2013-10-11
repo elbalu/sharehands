@@ -1,23 +1,23 @@
 <div class="well">
 	<h3>Register as NPO or school</h3>
 <form role="form" action="/register" method="post">
-  <input type="hidden" name="org" value="org"/>
+  <input type="hidden" name="accountType" value="org"/>
 
   <div class="form-group">
     <label for="orgName">Org name</label>
-    <input type="text" class="form-control" id="orgName" placeholder="Enter org name">
+    <input type="text" class="form-control" id="orgName" name="orgname" placeholder="Enter org name">
   </div>
   <div class="form-group">
     <label for="orgYourName">Your Name</label>
-    <input type="text" class="form-control" id="orgYourName" placeholder="Enter your name">
+    <input type="text" class="form-control" id="orgYourName" name="name" placeholder="Enter your name">
   </div>
   <div class="form-group">
     <label for="orgEmail">Email address</label>
-    <input type="email" class="form-control" id="orgemail" placeholder="Enter email">
+    <input type="email" class="form-control" id="orgemail" name="email" placeholder="Enter email">
   </div>
   <div class="form-group">
     <label for="orgPassword">Password</label>
-    <input type="password" class="form-control" id="orgPassword" placeholder="Enter password">
+    <input type="password"  name="password" class="form-control" id="orgPassword" name="password" placeholder="Enter password">
   </div>
 	  <button type="submit" class="btn btn-primary btn-lg btn-block">Register as Org</button>
 </form>

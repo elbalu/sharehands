@@ -25,25 +25,25 @@ UserModel = function () {
 	"use strict";
 
 	this.id = null;
-	this.firstName = null;
-	this.lastName = null;
+	this.name = null;
 	this.familyName = null;
 	this.phone = null;
 	this.email = null;
 	this.accountType = null;
 	this.address = null;
+	this.orgname = null;
 };
 
-UserModel = function (id, firstName, lastName, email, phone, accountType, address) {
+UserModel = function (id, name, orgname, email, phone, accountType, address) {
 
 	"use strict";
 
 	this.id = id;
-	this.firstName = firstName;
-	this.lastName = lastName;
+	this.name = name;
+	this.orgname = orgname;
 	this.phone = phone;
 	this.email = email;
-	this.accountType = accountType;
+	this.accountType = accountType || 'personal';
 	this.address = address;
 };
 
