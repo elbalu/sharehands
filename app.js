@@ -5,6 +5,7 @@ var express = require('express'),
     less = require('less'),
     fs = require('fs'),
     dummyUsers = require('./mvc/model/dummyUsers');
+    dummyPosts = require('./mvc/model/dummyPosts');
     dust = require('dustjs-linkedin');
 
 require('dustjs-helpers');
@@ -43,6 +44,7 @@ app.configure('development', function () {
 });
 
 app.locals.users = dummyUsers;
+app.locals.posts = dummyPosts;
 
 fs.readdir('./mvc/controller', function (err, files) {
     files.forEach(function (fn) {

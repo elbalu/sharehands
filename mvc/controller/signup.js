@@ -33,7 +33,9 @@ exports = module.exports = function (server) {
 		
 		//var model = {status : 'success', viewName: 'signupSuccess', user: user};
 		//res.json('sucess', model);
-
+		req.session.loggedIn = true;
+		req.session.user = user;
+		
 		req.model = {
             viewName: 'register/success',
             master: 'public/templates/master',
