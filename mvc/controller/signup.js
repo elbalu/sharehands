@@ -1,4 +1,4 @@
-var mongoose = require( 'mongoose' );
+//var mongoose = require( 'mongoose' );
 
 
 exports = module.exports = function (server) {
@@ -43,8 +43,7 @@ exports = module.exports = function (server) {
             },
             
         };
-
-        console.log(user);
+        
         res.render(req.model.master, req.model);
 	});
 };
