@@ -3,10 +3,27 @@ body {
   margin: 0;
   padding: 0;
 }
-#wrapper {
-  padding-top: 60px;
-}
 #homeBanner {
   background: url("../img/students.png") no-repeat scroll center 0 #ffffff;
-  height: 520px;
+  height: 300px;
+}
+#homeBanner h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
+  padding-top: 130px;
+}
+#marketing .row {
+  text-align: center;
+}
+@media (max-width: 480px) {
+  #homeBanner {
+    background: url("../img/students_small.png") no-repeat scroll center 0 #ffffff;
+    height: 200px;
+  }
+  #homeBanner h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 60px;
+  }
 }
