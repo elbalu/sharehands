@@ -38,9 +38,10 @@ exports = module.exports = function (server) {
             viewName: 'register/success',
             master: 'public/templates/master',
             data: {
-                title: 'Register'
+                title: 'Register',
+                user: user
             },
-            user: user
+            
         };
 
         console.log(user);

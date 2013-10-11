@@ -1,4 +1,4 @@
 <div class="well">
-	<div class="alert alert-sucess"><h2> Successfully Registered as {data.name}</h2>
+	<div class="alert alert-sucess"><h2> Successfully Registered as {data.user.name}</h2>
 	</div>
 </div>
