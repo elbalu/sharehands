@@ -17,6 +17,6 @@ exports = module.exports = function (server) {
 	});
 
 	server.post('/login', function (req, res) {
-		
+		res.redirect("/createPost");
 	});
 };
