@@ -1,0 +1,12 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+body {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  padding-top: 60px;
+}
+#homeBanner {
+  background: url("../img/students.png") no-repeat scroll center 0 #ffffff;
+  height: 520px;
+}

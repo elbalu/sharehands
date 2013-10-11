@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{title}</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="assets/css/docs.css" />
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+    {>"public/templates/inc/header" /}
+
+    
+            {>"public/templates/{viewName}.dust"/}
+       
+    {>"public/templates/inc/footer" /}
+
+    <div>
+    <script data-main="js/main" src="js/lib/require-2.0.1.js"></script>
+    <script  src="assets/js/holder.js"></script>
+
+</body>
+</html>
