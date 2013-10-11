@@ -57,7 +57,7 @@ module.exports = function (server) {
         res.json('landing', model);
     });
 
-    
+
     server.get('/getPost', function(req, res) {
         var model = {id:req.params.id, name: "Send all the list of adds in the region", description: "Send the all add post", status: 'sucess', viewName: 'sucess'};
         res.json('sucess', model);
@@ -65,11 +65,6 @@ module.exports = function (server) {
 
     server.get('/getPost/:id', function(req, res) {
         var model = {id:req.params.id, name: "Get the post", description: "Send the particular add post", status: 'sucess', viewName: 'sucess'};
-        res.json('sucess', model);
-    });
-
-    server.get('/register/:type', function(req, res) {
-        var model = {type:req.params.type, name: "Registration module", description: "Acoount creation is sucess", viewName: 'sucess'};
         res.json('sucess', model);
     });
 
