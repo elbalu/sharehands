@@ -1,6 +1,7 @@
 <div class="well">
 	<h3>Register as Student</h3>
-<form role="form" action="/post" method="post">
+<form role="form" action="/register" method="post">
+  <input type="hidden" name="student" value="student"/>
   <div class="form-group">
     <label for="stuName">Name</label>
     <input type="text" class="form-control" id="stuName" placeholder="Enter stu name">
