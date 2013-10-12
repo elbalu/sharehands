@@ -15,9 +15,9 @@ module.exports = {
 	},
 	production:{
 		fb:{
-			appId: '399428053486099',
-			appSecret: '4fdcff37478d33387d9fd0d69de0348f',
-			url: 'http://nearring.com/'
+			appId: '556862984362480',
+			appSecret: '43c06ee6d5b9cc2f2df3decea313ca2f',
+			url: 'http://abadri.ap01.aws.af.cm'
 		},
 		fs:{
 			appId: 'RSQVY140L01RAFABSGX45ODZ3ZBTWEFBIZXSO3MWUUA2JKOH',
