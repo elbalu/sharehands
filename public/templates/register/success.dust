@@ -2,7 +2,7 @@
 	<div class="alert alert-sucess"><h2> Successfully Registered as {data.user.name}</h2>
 	</div>
 	<h3>What you want to do next</h3>
-	<a href="/register/org" class="btn btn-primary btn-lg btn-block">Ask neighbours what you need</a>
-	<a href="/register/student" class="btn btn-default btn-lg btn-block">See what students need</a>
+	<a href="/createPost" class="btn btn-primary btn-lg btn-block">Ask neighbours what you need</a>
+	<a href="/getPost/all" class="btn btn-default btn-lg btn-block">See what students need</a>
 
 </div>
