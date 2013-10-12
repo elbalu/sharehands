@@ -1,3 +1,6 @@
+var auth = require('../helper/auth'),
+    UserModel = require('../model/DBUserModel');;
+
 exports = module.exports = function (server) {
 
 	"use strict";
@@ -17,7 +20,18 @@ exports = module.exports = function (server) {
 	});
 
 	server.post('/login', function (req, res) {
-		res.redirect("/createPost");
+        var email = req.body.email,
+            password = req.body.password;
+		
+            auth.getUser (email, function(err, user) {
+                    if (err) {
+                        res.redirect("/login");
+                    } else if(user[0].password == password) {
+                        res.redirect("/createPost");
+                    } else {
+                        res.redirect("/login");
+                    }
+            });
 	});
 
 	 server.get('/logout', function (req, res) {

@@ -1,3 +1,4 @@
+var User = require('../model/DBUserModel');
 module.exports = {
 	/**
 	 * @param {Object} request
@@ -15,5 +16,9 @@ module.exports = {
 			res.redirect('/login');
 			return;
 		}
+	},
+
+	getUser: function (email, callback) {
+		User.find({"email": email}, callback); 
 	}
 };

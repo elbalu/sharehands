@@ -1,31 +1,27 @@
+var User = require('../model/DBUserModel');
 exports = module.exports = function (server) {
 
 	"use strict";
 
-	server.get('/getUser/:id', function (req, res) {
+	server.get('/getUser/:email', function (req, res) {
 
-		console.log(server.locals.users.dummyUsers);
-		var id = req.params.id,
+		var email = req.params.email,
 			model,
 			user = null,
 			users = server.locals.users.dummyUsers;
 
-		if (id === 'all') {
-			user = users;
-		} else {
-			user = users.filter(function (usr) {
-	        	return usr.id === id;
-	    	});
-		} 
+		User.find({"email": email}, function(err, user) {
+				if (err) {
+					console.log(err);
+					errmsg = "User not found";
+					var model = {status : 'error', msg: err};
+					res.json(model);
+				} else {
+					var model = {status : 'success', user: user};
+					res.json(model);
+				}
 
-		if(user.length) {
-			var model = {status : 'success', user: user};
-		} else {
-			var model = {status : 'failure', user: user};
-		}
-
-        
-		res.json(model);
+			});
     });
 
 };
