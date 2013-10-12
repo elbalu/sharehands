@@ -1,16 +1,18 @@
-var auth = require('../helper/auth');
+var auth = require('../helper/auth'),
+	PostModel = require('../model/DBPostModel');
 
 exports = module.exports = function (server) {
 
     server.get('/createPost', auth.validateSession, function (req, res) {
 
-    	var model = {
-	            viewName: 'posts/createPost',
-	            master: 'public/templates/master',
-	            data: {
-	                title: 'Create Post'
-	            }
-	        };
+		var model = {
+			viewName: 'post/createPost',
+			master: 'public/templates/master',
+			data: {
+				title: 'Create Post'
+			}
+		};
+        
         req.model = model;
 
         res.render(req.model.master, model);
@@ -19,32 +21,40 @@ exports = module.exports = function (server) {
 
     server.post('/createPost', function (req, res) {
 
-		console.log(server.locals.posts.dummyPosts);
-		
-		var post = new PostModel(server.locals.posts.dummyPosts.length+1, 
-									req.body.title, 
-									req.body.categeory,
-									req.body.location, 
-									req.body.desc, 
-									req.session.user);
+		var post = new PostModel({
+				title: req.body.title,
+				latitude : req.body.latitude,
+				longitude : req.body.longitude,
+				desc : req.body.desc,
+				email :  req.session.user.email || 'guest',
+				categeory : req.body.categeory
+            });
+        
+        var errMsg,
+            success = false;
 
-		server.locals.posts.dummyPosts.push(post);
-		
+        post.save(function(err){
+            if(err) {
+               console.log("Error in inserting post");
+            } else {
+                success = true;
+            }
+        });
+
+
 		var model = {
-	            viewName: 'post/success',
-	            master: 'public/templates/master',
-	            data: {
-	                title: 'Posted',
-	                post: post,
-	                user: req.session.user || null
-	            }
-	        };
+				viewName: 'post/success',
+				master: 'public/templates/master',
+				data: {
+					title: 'Posted',
+					post: post,
+					user: req.session.user || null
+				}
+			};
 
 		req.model = model;
-        
-        //res.render(req.model.master, req.model);
-        
-		res.json('sucess', model);
+
+		res.json(model);
     });
 
 };

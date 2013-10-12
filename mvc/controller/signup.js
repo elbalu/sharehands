@@ -1,4 +1,5 @@
-//var mongoose = require( 'mongoose' );
+var mongoose = require( 'mongoose' ),
+    User = require('../model/DBUserModel');
 
 
 exports = module.exports = function (server) {
@@ -28,24 +29,43 @@ exports = module.exports = function (server) {
     });
 
 	server.post('/register', function(req, res) {
-		var user = new UserModel(server.locals.users.dummyUsers.length+1, req.body.name, req.body.orgname, req.body.email, req.body.phone, req.body.accountType, req.body.address);
-		server.locals.users.dummyUsers.push(user);
-		
-		//var model = {status : 'success', viewName: 'signupSuccess', user: user};
-		//res.json('sucess', model);
-		req.session.loggedIn = true;
-		req.session.user = user;
-		
-		req.model = {
-            viewName: 'register/success',
-            master: 'public/templates/master',
-            data: {
-                title: 'Register',
-                user: user
-            },
-            
-        };
+		//var user = new UserModel(server.locals.users.dummyUsers.length+1, req.body.name, req.body.orgname, req.body.email, req.body.phone, req.body.accountType, req.body.address);
+		//server.locals.users.dummyUsers.push(user);
+
+        var user = new User({
+                name : req.body.name,
+                email : req.body.email,
+                phone : req.body.phone,
+                accountType : req.body.accountType,
+                address : req.body.address,
+                orgname : req.body.orgname,
+                password : req.body.password
+            });
         
-        res.render(req.model.master, req.model);
+        var errMsg = null,
+            success = false,
+            viewName = 'register/success';
+
+        user.save(function(err){
+            if(err) {
+                 viewName =  'register/register';
+                 errMsg = "User already exist";
+            } else {
+                req.session.loggedIn = true;
+                req.session.user = user;
+            }
+           
+            req.model = {
+                viewName: viewName,
+                master: 'public/templates/master',
+                data: {
+                    title: 'Register',
+                    errMsg : errMsg,
+                    user: user
+                }
+            };
+        
+            res.render(req.model.master, req.model);
+        });         
 	});
 };

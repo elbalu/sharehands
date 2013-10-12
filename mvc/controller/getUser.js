@@ -25,7 +25,7 @@ exports = module.exports = function (server) {
 		}
 
         
-		res.json('sucess', model);
+		res.json(model);
     });
 
 };

@@ -10,11 +10,15 @@ var express = require('express'),
     passport = require('passport'),
     FacebookStrategy = require('passport-facebook').Strategy;
 
-require('dustjs-helpers');
+
+//require('dustjs-helpers');
+
 var config = require('./config'),
-routes = require('./routes/index');
+    routes = require('./routes/index');
 
 
+//Opening a DB connection
+require('./mvc/model/db');
 
 
 //setting for passport
@@ -50,6 +54,7 @@ function (accessToken, refreshToken, profile, done) {
         
     });
 }));
+
 
 var app = express();
 app.engine('dust', engines.dust);
