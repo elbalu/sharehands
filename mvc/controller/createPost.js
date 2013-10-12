@@ -60,7 +60,6 @@ exports = module.exports = function (server) {
 
 		//res.json(model);
         res.render(req.model.master, model);
-
     });
 
 };

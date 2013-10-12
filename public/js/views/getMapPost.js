@@ -65,24 +65,27 @@ define([
 				  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
 
 				  var mapInfo = JSON.parse($("#mapInfo").html());
-				  var i, x = mapInfo.posts.dummyPosts;
+				  var i, x = mapInfo;
 				  for(i = 0; i < x.length; i+= 1){
 					  var marker = new google.maps.Marker({
-					      position: new google.maps.LatLng(parseFloat(x[i].location.replace(/,.*$/,"")),parseFloat(x[i].location.replace(/^.*,/,""))),
+					      position: new google.maps.LatLng(x[i].latitude,x[i].longitude),
 					      map: map, 
-					      title: x[i].title
+					      title: x[i].title,
+					      icon: x[i].type == "have" ? "/img/haveMarker.png" : "/img/wantMarker.png"
 						  });
-					  	attachMessage(marker, i, x[i].desc);
+					  	attachMessage(marker, i, x[i].desc, x[i]._id);
 					}
 
-					function attachMessage(marker, num, message){
+					function attachMessage(marker, num, message, id){
 						var infoWindow = new google.maps.InfoWindow({
-				    		content: message
+				    		content: "<a href='/getPost/"+ id +"'>" + message + "</a>"
 						});
 					  	google.maps.event.addListener(marker, 'click', function () {
 							infoWindow.open(marker.get('map'), marker);
 						});
 					}
+
+				  	console.log(position.coords.latitude+1);
 
 			},
 			error: function(msg){
