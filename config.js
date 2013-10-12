@@ -26,5 +26,13 @@ module.exports = {
 			authUrl: 'https://foursquare.com/',
 			apiUrl: 'https://api.foursquare.com/'
 		}
-	}
-}
+	},
+	mongo: {
+        hostname: "localhost",
+        port: 27017,
+        username: "",
+        password : "",
+        name :"",
+        db: "db"
+    }
+};
