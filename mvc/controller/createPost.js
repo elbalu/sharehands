@@ -31,6 +31,7 @@ exports = module.exports = function (server) {
 				categeory : req.body.categeory,
 				type: req.body.type,
 				name: req.body.name,
+				imgUrl: req.body.imgUrl,
 				buttonAction: (req.body.type == 'want') ? "I Will Help!" : "I Need It!"
             });
         
