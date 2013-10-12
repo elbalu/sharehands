@@ -10,7 +10,7 @@
     			<p>
       				<strong>{email}</strong>&#160;{type}&#160;{title}
       			</p>
-      			<button type="submit" class="btn btn-primary btn-lg btn-block">I {buttonAction} it!</button>
+      			<button type="submit" class="btn btn-primary btn-lg btn-block">{buttonAction}</button>
   			</div>
   		</div>
   	</div>
