@@ -26,8 +26,13 @@ define([
 
         processListItem: function (e) {
             var el = e.target,
-            //pEl = $(el).closest(".listBox");
-            pEl.style("opacity","0.35");
+            pEl = $(el).closest(".listBox");
+            $(pEl).fadeTo(100, 0.35, function(){
+                var p = $(this).position(),
+                xP = p.top + $(this).height(), yP = p.left + $(this).width();
+
+                $("#loadInfo").position({top: xP, left:yP}).show();
+            });
         },
        
         proceedInnerLink: function (e) {

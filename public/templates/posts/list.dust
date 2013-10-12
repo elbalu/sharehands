@@ -2,7 +2,7 @@
 	<div class="row">
 	{#data.posts}
 
-  <div id="loadInfo">
+  <div id="loadInfo" style="display:none">
   <img id="" src="/img/loading.png" height="64" width="64"/>
   <span class="loadText" id="loadText">Loading...</span>
   <img id="" src="/img/loading.png" height="64" width="64"/>

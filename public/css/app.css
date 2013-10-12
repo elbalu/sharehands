@@ -43,16 +43,19 @@ body {
 #listPost .thumbnail {
   margin-top: 20px;
 }
+#listPost .thumbnail img {
+  width: 300px;
+  height: 200px;
+}
 #listPost .thumbnail .caption h3 {
   min-height: 53px;
 }
 #listPost .thumbnail .caption p {
   min-height: 45px;
 }
-#listPost .thumbnail .post-want {
+#listPost .thumbnail.post-want {
   border-top: 10px solid #DFF0D8;
 }
-<<<<<<< HEAD
 #listPost .thumbnail.post-have,
 #listPost .thumbnail.post-give {
   border-top: 10px solid #D9EDF7;
@@ -65,8 +68,3 @@ body {
 #mapPost {
   height: 500px;
 }
-=======
-#listPost .thumbnail .post-have {
-  border-top: 10px solid #D9EDF7;
-}
->>>>>>> 1ee31dc57395526613dcb8bc9d3bae941bb436c5
