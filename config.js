@@ -17,7 +17,7 @@ module.exports = {
 		fb:{
 			appId: '556862984362480',
 			appSecret: '43c06ee6d5b9cc2f2df3decea313ca2f',
-			url: 'http://crowdgive.aws.af.cm'
+			url: 'http://sharinghands.aws.af.cm/'
 		},
 		fs:{
 			appId: 'RSQVY140L01RAFABSGX45ODZ3ZBTWEFBIZXSO3MWUUA2JKOH',

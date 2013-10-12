@@ -41,6 +41,9 @@ if (process.env.VCAP_SERVICES) {
         fbCallBackUrl = config.development.fb.url + 'fbauthed';
 }
 /*local */
+console.log('fbCallBackUrl');
+console.log(fbCallBackUrl);
+console.log('fbCallBackUrl');
 
 passport.use(new FacebookStrategy({
 
