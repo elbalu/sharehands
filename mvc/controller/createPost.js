@@ -4,13 +4,13 @@ var auth = require('../helper/auth'),
 exports = module.exports = function (server) {
 
     server.get('/createPost', auth.validateSession, function (req, res) {
-    	console.log(req.session.user.emails[0].value);
+    	console.log(req.session.user);
 		var model = {
 			viewName: 'posts/createPost',
 			master: 'public/templates/master',
 			data: {
 				title: 'Create Post',
-				email :  req.session.user.emails[0].value
+				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email
 			}
 		};
         
@@ -27,7 +27,7 @@ exports = module.exports = function (server) {
 				latitude : req.body.latitude,
 				longitude : req.body.longitude,
 				desc : req.body.desc,
-				email :  req.session.user.emails[0].value || 'guest',
+				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email,
 				categeory : req.body.categeory,
 				type: req.body.type
             });
