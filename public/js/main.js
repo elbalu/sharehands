@@ -9,7 +9,7 @@ require.config({
     bootstrap:'lib/bootstrap',
     less:'lib/less-1.3.0.min',
     select2: 'lib/select2',
-    foursquare: 'lib/foursquareVenues'
+    geoPosition: 'lib/geoPosition'
   },
 
   shim: {
@@ -27,10 +27,10 @@ require.config({
   }
 });
 
-require(['views/app', 'views/register'], function(AppView, RegisterView){
+require(['views/app', 'views/geolocation'], function(AppView, geoView){
   var app_view = new AppView;
   app_view.render();
-  var reg_view = new RegisterView;
-  reg_view.render();
+  var geo_view = new geoView;
+  geo_view.render();
 });
 

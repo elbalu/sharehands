@@ -3,7 +3,7 @@ define([
         'underscore',
         'backbone',
         'bootstrap',
-        'views/register'
+        'views/geolocation'
 ], function ($, _, Backbone, Bootstrap) {
 
     var AppView = Backbone.View.extend({

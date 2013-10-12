@@ -7,8 +7,9 @@ module.exports = {
 	validateSession: function (req, res, next) {
 
 		"use strict";
-
-		if (req.session.loggedIn) {
+		req.session.redirectUrl = req.url;
+		console.log(req.url);
+		if (req.session.user) {
 			next();
 		} else {
 			res.redirect('/login');
