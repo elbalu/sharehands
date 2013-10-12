@@ -1,5 +1,5 @@
 <div class="well">
-	<div class="alert alert-success"><h2> Request Sent Successfully</h2>
+	<div class="alert alert-success"><h2> {type} Sent Successfully</h2>
 	</div>
 	<h3>What you want to do next</h3>
 	<a href="/createPost" class="btn btn-primary btn-lg btn-block">Create Post</a>

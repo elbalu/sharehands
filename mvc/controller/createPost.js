@@ -48,6 +48,7 @@ exports = module.exports = function (server) {
 		var model = {
 				viewName: 'posts/success',
 				master: 'public/templates/master',
+				type: 'Post',
 				data: {
 					title: 'Posted',
 					post: post,
@@ -57,7 +58,9 @@ exports = module.exports = function (server) {
 
 		req.model = model;
 
-		res.json(model);
+		//res.json(model);
+        res.render(req.model.master, model);
+
     });
 
 };
