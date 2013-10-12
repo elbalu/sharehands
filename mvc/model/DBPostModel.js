@@ -13,7 +13,8 @@ var DBPostSchema = new Schema({
 	email : String,
 	date: { type: Date, default: Date.now },
 	type : String,
-	namd: String
+	name: String,
+	buttonAction: String
 });
 
 

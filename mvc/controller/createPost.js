@@ -10,7 +10,8 @@ exports = module.exports = function (server) {
 			master: 'public/templates/master',
 			data: {
 				title: 'Create Post',
-				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email
+				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email,
+				name: req.session.user.length ? req.session.user[0].name : req.session.user.name
 			}
 		};
         
@@ -21,16 +22,16 @@ exports = module.exports = function (server) {
     });
 
     server.post('/createPost', function (req, res) {
-    	console.log(req.body.type);
 		var post = new PostModel({
 				title: req.body.title,
 				latitude : req.body.latitude,
 				longitude : req.body.longitude,
 				desc : req.body.desc,
-				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email,
+				email :  req.body.email,
 				categeory : req.body.categeory,
 				type: req.body.type,
-				name: req.session.user.displayName ? req.session.user.displayName : req.session.user.name
+				name: req.body.name,
+				buttonAction: (req.body.type == 'want') ? "I Will Help!" : "I Need It!"
             });
         
         var errMsg,
@@ -48,7 +49,6 @@ exports = module.exports = function (server) {
 		var model = {
 				viewName: 'posts/success',
 				master: 'public/templates/master',
-				type: 'Post',
 				data: {
 					title: 'Posted',
 					post: post,
@@ -59,7 +59,7 @@ exports = module.exports = function (server) {
 		req.model = model;
 
 		//res.json(model);
-        res.render(req.model.master, model);
+		res.render(req.model.master, model);
     });
 
 };

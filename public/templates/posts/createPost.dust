@@ -43,11 +43,16 @@
 		  <div class="form-group">
 		    <label for="postEmail">Email address</label>
 		    <input type="text" class="form-control" id="postEmail" name="email" placeholder="user@example.com" value={data.email}>
+		    <input type="hidden" class="form-control" id="postEmail" name="name" value={data.name}>
+		  </div>
+		   <div class="form-group">
+		    <label for="postEmail">Name</label>
+		    <input type="text" class="form-control" id="postname" name="name" value={data.name}>
 		  </div>
 		 
 		  <div class="form-group">
 		    <label for="postDesc">Briefly describe your need/contribution</label>
-		    <textarea rows="6" cols="50" class="form-control" id="postDesc" name="desc">
+		    <textarea rows="4" cols="50" class="form-control" id="postDesc" name="desc">
 			</textarea>
 		    
 		  </div>
