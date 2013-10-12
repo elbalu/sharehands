@@ -57,7 +57,8 @@ exports = module.exports = function (server) {
 
 		req.model = model;
 
-		res.json(model);
+		//res.json(model);
+		res.render(req.model.master, model);
     });
 
 };
