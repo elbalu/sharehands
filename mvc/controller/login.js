@@ -26,7 +26,8 @@ exports = module.exports = function (server) {
             auth.getUser (email, function(err, user) {
                     if (err) {
                         res.redirect("/login");
-                    } else if(user[0].password == password) {
+                    } else if(user[0] && user[0].password == password) {
+                        req.session.user = user;
                         res.redirect("/createPost");
                     } else {
                         res.redirect("/login");

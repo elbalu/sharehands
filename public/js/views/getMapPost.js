@@ -50,6 +50,7 @@ define([
 				  mapcanvas.style.width = '560px';
 				    
 				  document.querySelector('article').appendChild(mapcanvas);
+
 				  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				  var latlng1 = new google.maps.LatLng(position.coords.latitude+0.01, position.coords.longitude+0.01);
 
@@ -60,29 +61,29 @@ define([
 				    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
 				    mapTypeId: google.maps.MapTypeId.ROADMAP
 				  };
-				  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
-				  console.log(position.coords.latitude+1);
-				  var infoWindow = new google.maps.InfoWindow({
-				    content: 'Content goes here..'
-				});
 
-				  var marker = new google.maps.Marker({
-				      position: latlng, 
-				      map: map, 
-				      infoWindow: infoWindow,
-				      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
-				  });
-				  //infoWindow.open(map, marker);
-				  
-				  var marker1 = new google.maps.Marker({
-				      position: latlng1, 
-				      map: map, 
-				      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
-				  });
-				  google.maps.event.addListener(marker, 'click', function () {
-					// where I have added .html to the marker object.
-					infoWindow.open(map, marker);
-					});
+				  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+
+				  var mapInfo = JSON.parse($("#mapInfo").html());
+				  var i, x = mapInfo.posts.dummyPosts;
+				  for(i = 0; i < x.length; i+= 1){
+					  var marker = new google.maps.Marker({
+					      position: new google.maps.LatLng(parseFloat(x[i].location.replace(/,.*$/,"")),parseFloat(x[i].location.replace(/^.*,/,""))),
+					      map: map, 
+					      title: x[i].title
+						  });
+					  	attachMessage(marker, i, x[i].desc);
+					}
+
+					function attachMessage(marker, num, message){
+						var infoWindow = new google.maps.InfoWindow({
+				    		content: message
+						});
+					  	google.maps.event.addListener(marker, 'click', function () {
+							infoWindow.open(marker.get('map'), marker);
+						});
+					}
+
 			},
 			error: function(msg){
 				var s = document.querySelector('#status');
