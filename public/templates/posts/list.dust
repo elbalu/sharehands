@@ -1,7 +1,14 @@
 <div class="well" id="listPost">
+	<div class="row">
 	{#data.posts}
-	<a  class="alert alert-{type}" href="/getPost/{id}">
+	<a  class="thumbnail" href="/getPost/{id}">
 		<strong>{email}</strong>&#160;{type}&#160;{title}
 	</a> 
+	<div class="col-sm-6 col-md-3 post-{type}">
+    <a href="/getPost/{id}" class="thumbnail">
+      <strong>{email}</strong>&#160;{type}&#160;{title}
+    </a>
+  </div>
 	{/data.posts}
+</div>
 </div>
