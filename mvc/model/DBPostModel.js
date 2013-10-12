@@ -12,7 +12,8 @@ var DBPostSchema = new Schema({
 	desc : String,
 	email : String,
 	date: { type: Date, default: Date.now },
-	categeory : String
+	type : String,
+	namd: String
 });
 
 

@@ -33,8 +33,8 @@ exports = module.exports = function (server) {
 							posts: post
 						}
 					};
-					//res.json(req.model);
-					res.render(req.model.master, req.model);
+					res.json(req.model);
+					//res.render(req.model.master, req.model);
 				}
 
 			});
