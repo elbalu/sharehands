@@ -18,11 +18,7 @@
     			<p>
       				<strong>{email}</strong>&#160;{title}
       			</p>
-<<<<<<< HEAD
       			<button type="submit" class="btn btn-primary btn-lg btn-block btn-{type}">{buttonAction}</button>
-=======
-      			<button type="submit" class="listButton btn btn-primary btn-lg btn-block">{buttonAction}</button>
->>>>>>> 1ee31dc57395526613dcb8bc9d3bae941bb436c5
   			</div>
   		</div>
   	</div>
