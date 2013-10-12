@@ -27,10 +27,12 @@ require.config({
   }
 });
 
-require(['views/app', 'views/geolocation'], function(AppView, geoView){
+require(['views/app', 'views/geolocation', 'views/register'], function(AppView, geoView, RegisterView){
   var app_view = new AppView;
   app_view.render();
   var geo_view = new geoView;
   geo_view.render();
+  var reg_view = new RegisterView;
+  reg_view.render();
 });
 

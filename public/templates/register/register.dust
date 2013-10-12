@@ -3,4 +3,6 @@
 	<a href="/register/org" class="btn btn-primary btn-lg btn-block">Register as Org</a>
 	<a href="/register/student" class="btn btn-success btn-lg btn-block">Register as Student</a>
 
+<div id="map"></div>
+
 </div>
