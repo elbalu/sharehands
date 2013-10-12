@@ -1,6 +1,11 @@
 <div class="well" id="mapPost">
+  <p>
+  <a href="/getPost/all/list" class="btn btn-success pull-right">List View</a>
+</p>
 	<article>
-      <p>Finding your location: <span id="status">checking...</span></p>
+      <p>Finding your location: <span id="status">checking...</span>
+
+      </p>
     </article>
 
 
