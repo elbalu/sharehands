@@ -22,7 +22,7 @@
     			<p>
       				<strong>{email}</strong>&#160;{title}
       			</p>
-      			<button type="submit" class="btn btn-primary btn-lg btn-block btn-{type}">{buttonAction}</button>
+      			<button type="submit" class="btn btn-primary btn-lg btn-block btn-{type} listButton">{buttonAction}</button>
   			</div>
   		</div>
   	</div>
