@@ -1,6 +1,16 @@
 <div class="well">
 	<h3>Register as NPO or school</h3>
-<form role="form" action="/register" method="post">
+
+  <div class="row">
+  
+
+    <div class="col-md-6">
+      <img src="../img/org.jpg" class="img-thumbnail visible-lg" style="height:345px" />
+    </p>
+    </div>
+    <div class="col-md-6">
+      
+      <form role="form" action="/register" method="post">
   <input type="hidden" name="accountType" value="org"/>
 
   <div class="form-group">
@@ -19,6 +29,12 @@
     <label for="orgPassword">Password</label>
     <input type="password"  name="password" class="form-control" id="orgPassword" name="password" placeholder="Enter password" required>
   </div>
-	  <button type="submit" class="btn btn-primary btn-lg btn-block">Register as Org</button>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Create Acount</button>
 </form>
+      
+    </div>
+  </div>
+
+
+
 </div>

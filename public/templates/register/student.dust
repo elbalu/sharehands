@@ -1,6 +1,14 @@
 <div class="well">
-	<h3>Register as Student</h3>
-<form role="form" action="/register" method="post">
+	<h3>Register as individual</h3>
+
+<div class="row">
+  
+
+    <div class="col-md-6">
+      <img src="../img/student.jpg" class="img-thumbnail visible-lg" />
+    </div>
+    <div class="col-md-6">
+      <form role="form" action="/register" method="post">
   <input type="hidden" name="student" value="student"/>
   <div class="form-group">
     <label for="stuName">Name</label>
@@ -14,6 +22,13 @@
     <label for="stuPassword">Password</label>
     <input type="password" class="form-control" id="stuPassword" name="password" placeholder="Enter password" required>
   </div>
-	  <button type="submit" class="btn btn-primary btn-lg btn-block">Register as Student</button>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Create Acount</button>
 </form>
+  </p>
+    </div>
+  </div>
+
+
+
+
 </div>

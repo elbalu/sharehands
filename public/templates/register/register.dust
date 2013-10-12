@@ -6,7 +6,7 @@
 		<div class="col-md-6">
 			<a href="/register/student"><img src="../img/student.jpg" class="img-thumbnail visible-lg" /></a>
 			<p style="margin-top:10px">
-			<a href="/register/student" class="btn btn-success btn-lg btn-block">Register as Student</a>
+			<a href="/register/student" class="btn btn-success btn-lg btn-block">Register as individual</a>
 		</p>
 		</div>
 		<div class="col-md-6">
