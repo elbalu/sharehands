@@ -11,7 +11,7 @@ define([
 
         el: $("#wrap"),
         events: {
-           
+           "click button.listButton": "processListItem"
         },
 
         initialize: function () {
@@ -24,6 +24,11 @@ define([
 
         },
 
+        processListItem: function (e) {
+            var el = e.target,
+            //pEl = $(el).closest(".listBox");
+            pEl.style("opacity","0.35");
+        },
        
         proceedInnerLink: function (e) {
             $.get(e.target.href, function (json) {
