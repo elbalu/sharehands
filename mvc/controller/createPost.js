@@ -29,7 +29,8 @@ exports = module.exports = function (server) {
 				desc : req.body.desc,
 				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email,
 				categeory : req.body.categeory,
-				type: req.body.type
+				type: req.body.type,
+				name: req.session.user.displayName ? req.session.user.displayName : req.session.user.name
             });
         
         var errMsg,
