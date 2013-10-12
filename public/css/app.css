@@ -4,9 +4,9 @@ body {
   padding: 0;
 }
 .navbar-brand {
-  background: url("../img/sharinghand.png") no-repeat scroll center 0 #ffffff;
+  background: url("../img/sharinghand.png") no-repeat scroll center 0;
   height: 48px;
-  width: 141px;
+  width: 181px;
   background-size: 178px;
 }
 .content {
