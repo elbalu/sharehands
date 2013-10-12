@@ -42,8 +42,6 @@ exports = module.exports = function (server) {
 
 
 	server.get('/getPost/:id', function (req, res) {
-
-		console.log(server.locals.users.dummyUsers);
 		var id = req.params.id,
 			model,
 			errmsg = null,

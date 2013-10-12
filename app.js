@@ -10,6 +10,9 @@ var express = require('express'),
 
 require('dustjs-helpers');
 
+//require('dustjs-helpers');
+var config = require('./config');
+
 //Opening a DB connection
 require('./mvc/model/db');
 

@@ -5,7 +5,7 @@ require.config({
     backbone: 'lib/backbone-optamd3-min',
     json: (typeof JSON === "undefined") ? "lib/json2" : "empty:",
     dust: 'lib/dust-core-1.2.3',
-    dustHelper: 'lib/dust-helpers',
+//    dustHelper: 'lib/dust-helpers',
     bootstrap:'lib/bootstrap',
     less:'lib/less-1.3.0.min',
     select2: 'lib/select2',
@@ -27,8 +27,10 @@ require.config({
   }
 });
 
-require(['views/app'], function(AppView){
+require(['views/app', 'views/register'], function(AppView, RegisterView){
   var app_view = new AppView;
   app_view.render();
+  var reg_view = new RegisterView;
+  reg_view.render();
 });
 

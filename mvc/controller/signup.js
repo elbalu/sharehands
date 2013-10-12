@@ -42,35 +42,30 @@ exports = module.exports = function (server) {
                 password : req.body.password
             });
         
-        var errMsg,
-            success = false;
+        var errMsg = null,
+            success = false,
+            viewName = 'register/success';
 
         user.save(function(err){
             if(err) {
-                console.log(err);
-                if (error.code === 11000){
-                    errMsg = "User already exist";
-                }
+                 viewName =  'register/register';
+                 errMsg = "User already exist";
             } else {
-                success = true;
+                req.session.loggedIn = true;
+                req.session.user = user;
             }
-        });
-
-		//var model = {status : 'success', viewName: 'signupSuccess', user: user};
-		//res.json('sucess', model);
-		req.session.loggedIn = true;
-		req.session.user = user;
-		
-		req.model = {
-            viewName: 'register/success',
-            master: 'public/templates/master',
-            data: {
-                title: 'Register',
-                user: user
-            },
-            
-        };
+           
+            req.model = {
+                viewName: viewName,
+                master: 'public/templates/master',
+                data: {
+                    title: 'Register',
+                    errMsg : errMsg,
+                    user: user
+                }
+            };
         
-        res.render(req.model.master, req.model);
+            res.render(req.model.master, req.model);
+        });         
 	});
 };
