@@ -4,13 +4,13 @@
 	
 	<div class="col-sm-6 col-md-3 post-{type}">
 		<div class="thumbnail">
-    		<img src="/img/students/student1.jpg">
+    		<img src="/img/{imgUrl}">
     		<div class="caption">
     			<h3>{title}</h3>
     			<p>
       				<strong>{email}</strong>&#160;{type}&#160;{title}
       			</p>
-      			<button type="submit" class="btn btn-primary btn-lg btn-block">I {type} it!</button>
+      			<button type="submit" class="btn btn-primary btn-lg btn-block">I {buttonAction} it!</button>
   			</div>
   		</div>
   	</div>
