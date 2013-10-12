@@ -1,3 +1,4 @@
+var PostModel = require('../model/DBPostModel');
 exports = module.exports = function (server) {
 
 	"use strict";
@@ -5,30 +6,38 @@ exports = module.exports = function (server) {
 
 	server.get('/getPost/all/:type', function (req, res) {
 
-		console.log(server.locals.users.dummyUsers);
-		var id = req.params.type,
+		var type = req.params.type,
 			model,
 			viewName,
-			posts = server.locals.posts.dummyPosts;
+			posts;
 
 
-		if (type === 'map') {
-			viewName = 'post/map';
-		} else {
-			viewName = 'post/list';
-		} 
+		PostModel.find({}, function(err, post) {
+				if (err) {
+					console.log(err);
+					errmsg = err;
+					var model = {status : 'error', msg: err};
+					res.json(model);
+				} else {
 
-		req.model = {
-            viewName: viewName,
-            master: 'public/templates/master',
-            data: {
-                title: 'Register',
-                posts: posts
-            }     
-        };
-        
-        res.render(req.model.master, req.model);
-		
+					if (type === 'map') {
+						viewName = 'post/map';
+					} else {
+						viewName = 'post/list';
+					} 
+					req.model = {
+						viewName: viewName,
+						master: 'public/templates/master',
+						data: {
+							title: 'Register',
+							posts: post
+						}
+					};
+					res.json(req.model);
+					//res.render(req.model.master, req.model);
+				}
+
+			});
     });
 
 
@@ -37,24 +46,22 @@ exports = module.exports = function (server) {
 		console.log(server.locals.users.dummyUsers);
 		var id = req.params.id,
 			model,
-			post = null,
-			posts = server.locals.posts.dummyPosts;
+			errmsg = null,
+			post = null;
+			PostModel.find({"_id": id}, function(err, post) {
+				if (err) {
+					console.log(err);
+					errmsg = err;
+					var model = {status : 'error', msg: err};
+					res.json(model);
+				} else {
+					
+					var model = {status : 'success', post: post};
+					res.json(model);
+				}
 
-		if (id === 'all') {
-			post = posts;
-		} else {
-			post = posts.filter(function (post) {
-	        	return post.id === id;
-	    	});
-		} 
-
-		if (post.length) {
-			var model = {status : 'success', post: post};
-		} else {
-			var model = {status : 'failure', post: post};
-		}
-
-		res.json('sucess', model);
+			});
+		
     });
 
 };

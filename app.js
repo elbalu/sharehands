@@ -9,11 +9,12 @@ var express = require('express'),
     dust = require('dustjs-linkedin');
 
 require('dustjs-helpers');
+
+//Opening a DB connection
+require('./mvc/model/db');
+
+
 var config = require('./config');
-
-
-
-
 
 var app = express();
 app.engine('dust', engines.dust);
