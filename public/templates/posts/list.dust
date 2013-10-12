@@ -3,7 +3,7 @@
 	{#data.posts}
 	
 	<div class="col-sm-6 col-md-3 post-{type}">
-		<div class="thumbnail">
+		<div class="thumbnail post-{type}">
     		<img src="/img/{imgUrl}">
     		<div class="caption">
     			<h3>{title}</h3>
