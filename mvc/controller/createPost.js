@@ -1,6 +1,8 @@
+var auth = require('../helper/auth');
+
 exports = module.exports = function (server) {
 
-    server.get('/createPost', function (req, res) {
+    server.get('/createPost', auth.validateSession, function (req, res) {
 
     	var model = {
 	            viewName: 'post/createPost',
