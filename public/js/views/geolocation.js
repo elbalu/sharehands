@@ -51,8 +51,9 @@ define([
 				  mapcanvas.style.width = '560px';
 				    
 				  document.querySelector('article').appendChild(mapcanvas);
-				  
 				  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				  var latlng1 = new google.maps.LatLng(position.coords.latitude+0.01, position.coords.longitude+0.01);
+
 				  var myOptions = {
 				    zoom: 12,
 				    center: latlng,
@@ -66,7 +67,6 @@ define([
 				    content: 'Content goes here..'
 				});
 
-				  var latlng1 = new google.maps.LatLng(position.coords.latitude+1, position.coords.longitude+1);
 				  var marker = new google.maps.Marker({
 				      position: latlng, 
 				      map: map, 
@@ -74,12 +74,12 @@ define([
 				      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
 				  });
 				  //infoWindow.open(map, marker);
-				  /*
+				  
 				  var marker1 = new google.maps.Marker({
 				      position: latlng1, 
 				      map: map, 
 				      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
-				  });*/
+				  });
 				  google.maps.event.addListener(marker, 'click', function () {
 					// where I have added .html to the marker object.
 					infoWindow.open(map, marker);
