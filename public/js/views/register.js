@@ -9,7 +9,7 @@ define([
 		
 			el: 'body',
 		    
-		    lanlat: "37.3768774,-121.9213164",
+		    lonlat: "37.3768774,-121.9213164",
 		
 			events: {
 			    "keypress input#orgName": "listOrgs"
@@ -17,7 +17,7 @@ define([
 			
 			initialize: function(json) {
 			    console.log('init register');
-			    this.getLocation();
+			    //this.getLocation();
 			},
 			
 			render: function(json) {
@@ -34,7 +34,7 @@ define([
 
 		    getGoogleData: function(q) {
 			var url = "https://maps.googleapis.com/maps/api/place/textsearch/json?radius=500&sensor=true&types=school,university,establishment&key=AIzaSyD_Klqi6urvtIlL2YIJMKg55gWqUCdKp5o";
-			$.getJSON(url+"&location="+this.lanlat+"&query="+q, function(data){
+			$.getJSON(url+"&location="+this.lonlat+"&query="+q, function(data){
 			    console.log(data);
 			})
 			.done(function(){console.log("second success")})
@@ -48,11 +48,11 @@ define([
 		    },
 
 		    setLocation: function(pos) {
-			this.lanlat = pos.coords.latitude + "," + pos.coords.longitude;
+			this.lonlat = pos.coords.latitude + "," + pos.coords.longitude;
 		    },
 
 		    setLocationOnErr: function(err) {
-			this.lanlat = "37.3768774,-121.9213164";
+			this.lonlat = "37.3768774,-121.9213164";
 		    }
 
 		});
