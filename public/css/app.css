@@ -40,9 +40,18 @@ body {
     padding-top: 60px;
   }
 }
-#listPost .post-want {
-  border-top: 5px solid #DFF0D8;
+#listPost .thumbnail {
+  margin-top: 20px;
 }
-#listPost .post-have {
-  border-top: 5px solid #D9EDF7;
+#listPost .thumbnail .caption h3 {
+  min-height: 53px;
+}
+#listPost .thumbnail .caption p {
+  min-height: 45px;
+}
+#listPost .thumbnail .post-want {
+  border-top: 10px solid #DFF0D8;
+}
+#listPost .thumbnail .post-have {
+  border-top: 10px solid #D9EDF7;
 }

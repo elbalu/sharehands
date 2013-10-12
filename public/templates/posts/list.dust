@@ -1,14 +1,19 @@
 <div class="well" id="listPost">
 	<div class="row">
 	{#data.posts}
-	<a  class="thumbnail" href="/getPost/{id}">
-		<strong>{email}</strong>&#160;{type}&#160;{title}
-	</a> 
+	
 	<div class="col-sm-6 col-md-3 post-{type}">
-    <a href="/getPost/{id}" class="thumbnail">
-      <strong>{email}</strong>&#160;{type}&#160;{title}
-    </a>
-  </div>
+		<div class="thumbnail">
+    		<img src="/img/students/student1.jpg">
+    		<div class="caption">
+    			<h3>{title}</h3>
+    			<p>
+      				<strong>{email}</strong>&#160;{type}&#160;{title}
+      			</p>
+      			<button type="submit" class="btn btn-primary btn-lg btn-block">I {type} it!</button>
+  			</div>
+  		</div>
+  	</div>
 	{/data.posts}
 </div>
 </div>
