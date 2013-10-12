@@ -30,10 +30,11 @@ PostModel = function () {
 	this.desc = null;
 	this.user = null;
 	this.categeory = null;
+	this.type = null;
 
 };
 
-PostModel = function (id, title, categeory, location, desc, user) {
+PostModel = function (id, title, categeory, location, desc, user, type) {
 
 	"use strict";
 
@@ -43,6 +44,7 @@ PostModel = function (id, title, categeory, location, desc, user) {
 	this.desc = desc;
 	this.user = user;
 	this.categeory = categeory;
+	this.type = type;
 };
 
 

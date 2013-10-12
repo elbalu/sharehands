@@ -4,12 +4,13 @@ var auth = require('../helper/auth'),
 exports = module.exports = function (server) {
 
     server.get('/createPost', auth.validateSession, function (req, res) {
-
+    	console.log(req.session.user.emails[0].value);
 		var model = {
-			viewName: 'post/createPost',
+			viewName: 'posts/createPost',
 			master: 'public/templates/master',
 			data: {
-				title: 'Create Post'
+				title: 'Create Post',
+				email :  req.session.user.emails[0].value
 			}
 		};
         
@@ -20,14 +21,15 @@ exports = module.exports = function (server) {
     });
 
     server.post('/createPost', function (req, res) {
-
+    	console.log(req.body.type);
 		var post = new PostModel({
 				title: req.body.title,
 				latitude : req.body.latitude,
 				longitude : req.body.longitude,
 				desc : req.body.desc,
-				email :  req.session.user.email || 'guest',
-				categeory : req.body.categeory
+				email :  req.session.user.emails[0].value || 'guest',
+				categeory : req.body.categeory,
+				type: req.body.type
             });
         
         var errMsg,
@@ -43,7 +45,7 @@ exports = module.exports = function (server) {
 
 
 		var model = {
-				viewName: 'post/success',
+				viewName: 'posts/success',
 				master: 'public/templates/master',
 				data: {
 					title: 'Posted',

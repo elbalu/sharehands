@@ -5,7 +5,7 @@
 		var session = req.session;
 		var user =  req.user;
 		session.user =  user;
-		console.log(req.session.redirectUrl);
+		console.log(req.session.user.emails[0].value);
 		if(req.session.redirectUrl){
 			res.redirect(req.session.redirectUrl);	
 			delete req.session.redirectUrl;

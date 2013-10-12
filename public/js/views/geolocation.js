@@ -12,7 +12,7 @@ define([
 			el: '#createPost',
 		
 			events: {
-				'mouseover' : 'geoLoc'
+				'mouseover' : 'fillLatLng'
 			},
 			
 			initialize: function(json) {
@@ -22,7 +22,24 @@ define([
 			render: function() {
 				console.log('geo');
 			},
+			fillLatLng: function(){
+				if(this.count==0){
+					console.log('div load');
+					if (navigator.geolocation) {
+					  navigator.geolocation.getCurrentPosition(function(position){
+					  	console.log('position');
+					  	console.log(position.coords.latitude);
+					  	$('#postLat').val(position.coords.latitude);
+					  	$('#postLng').val(position.coords.longitude);
 
+					  });
+					} else {
+					  error('not supported');
+					}
+					this.count++;
+				}
+
+			},
 			geoLoc: function(){
 				if(this.count==0){
 					console.log('div load');
