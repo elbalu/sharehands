@@ -21,7 +21,7 @@
           <span class="glyphicon glyphicon-search"></span>
           <h2>Help</h2>
           <p>See what students are looking for nearby and share them what you can....</p>
-          <p><a class="btn btn-success btn-lg" href="/view/map">Explore</a></p>
+          <p><a class="btn btn-success btn-lg" href="/getPost/all/map">Explore</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
        

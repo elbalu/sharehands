@@ -27,12 +27,14 @@ require.config({
   }
 });
 
-require(['views/app', 'views/geolocation', 'views/register'], function(AppView, geoView, RegisterView){
+require(['views/app', 'views/geolocation', 'views/register', 'views/getMapPost'], function(AppView, geoView, RegisterView, mapPostView){
   var app_view = new AppView;
   app_view.render();
   var geo_view = new geoView;
   geo_view.render();
   var reg_view = new RegisterView;
   reg_view.render();
+  var mapPost_view = new mapPostView;
+  mapPost_view.render();
 });
 

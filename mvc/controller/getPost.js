@@ -21,9 +21,9 @@ exports = module.exports = function (server) {
 				} else {
 
 					if (type === 'map') {
-						viewName = 'post/map';
+						viewName = 'posts/map';
 					} else {
-						viewName = 'post/list';
+						viewName = 'posts/list';
 					} 
 					req.model = {
 						viewName: viewName,
@@ -33,8 +33,8 @@ exports = module.exports = function (server) {
 							posts: post
 						}
 					};
-					res.json(req.model);
-					//res.render(req.model.master, req.model);
+					//res.json(req.model);
+					res.render(req.model.master, req.model);
 				}
 
 			});

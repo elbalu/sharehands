@@ -1,0 +1,10 @@
+<div class="well" id="mapPost">
+	{.|js}
+	<article>
+      <p>Finding your location: <span id="status">checking...</span></p>
+    </article>
+	<div id="mapcanvas"></div>
+	<div id="status"></div>
+
+	
+</div>
