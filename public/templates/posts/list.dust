@@ -2,11 +2,15 @@
 	<div class="row">
 	{#data.posts}
 
-  <div id="loadInfo" style="display:none">
-  <img id="" src="/img/loading.png" height="64" width="64"/>
-  <span class="loadText" id="loadText">Loading...</span>
-  <img id="" src="/img/loading.png" height="64" width="64"/>
-  <span class="completeText" id="completeText">Completed...</span>
+  <div id="loadInfo" style="display:none;top:-200;left:-200;float:left">
+  <div id="loadImg" style="width:100px">
+  <img id="loadImgx" src="/img/loading.png" height="64" width="64"/><br/>
+  <span class="loadText" id="loadText" style="float:left;margin:auto">Loading...</span>
+  </div>
+  <div id="completeImg" style="width:100px">
+  <img id="completeImgx" src="/img/loading.png" height="64" width="64" style="float:left;margin:auto"/><br/>
+  <span class="completeText alert alert-success" id="completeText" style="float:left;margin:auto">Completed...</span>
+  </div>
   </div>
 
 	

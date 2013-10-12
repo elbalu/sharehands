@@ -29,9 +29,24 @@ define([
             pEl = $(el).closest(".listBox");
             $(pEl).fadeTo(100, 0.35, function(){
                 var p = $(this).position(),
-                xP = p.top + $(this).height(), yP = p.left + $(this).width();
-
-                $("#loadInfo").position({top: xP, left:yP}).show();
+                xP = p.top + $(this).height() / 2 - 64, yP = p.left + $(this).width() / 2 - 32;
+                var lImg = $("#loadInfo");
+                $("#loadInfo #loadImg").show();
+                $("#loadInfo #completeImg").hide();
+                $(lImg).css({"top":xP, "left":yP, "position":"absolute","float":"none"}).show();
+                setTimeout(function(){
+                    $("#loadInfo #loadImg").hide();
+                    $("#loadInfo #completeImg").show();
+                    setTimeout(function(){
+                        var px = $(pEl).position();
+                        $(pEl).animate({"top": px.top + 50}, 100, function(){
+                            $(pEl).animate({"top":-2000}, 100, function(){
+                                $(pEl).hide();
+                                $("#loadInfo").hide().css({"top":-200, "left":-200});
+                            });
+                        });
+                    },500);
+                }, 1000)
             });
         },
        
