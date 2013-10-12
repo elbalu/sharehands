@@ -9,9 +9,9 @@ exports = module.exports = function (server) {
 			viewName: 'posts/createPost',
 			master: 'public/templates/master',
 			data: {
-				title: 'Create Post',
-				email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email,
-				name: req.session.user.length ? req.session.user[0].name : req.session.user.name
+				title: 'Create Post'//,
+				//email :  req.session.user.emails ? req.session.user.emails[0].value : req.session.user.email,
+				//name: req.session.user.length ? req.session.user[0].name : req.session.user.name
 			}
 		};
         
