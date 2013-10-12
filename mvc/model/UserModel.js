@@ -34,22 +34,17 @@ UserModel = function () {
 	this.orgname = null;
 };
 
-UserModel = function (id, name, orgname, email, phone, accountType, address) {
+UserModel = function (id) {
 
 	"use strict";
 
 	this.id = id;
-	this.name = name;
-	this.orgname = orgname;
-	this.phone = phone;
-	this.email = email;
-	this.accountType = accountType || 'personal';
-	this.address = address;
+	
 };
 
 
 UserModel.prototype = {
-
+	
 };
 
 

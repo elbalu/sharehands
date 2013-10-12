@@ -5,5 +5,6 @@
 		var session = req.session;
 		var user =  req.user;
 		session.user =  user;
+		console.log(user);
         res.redirect('/');
 	}

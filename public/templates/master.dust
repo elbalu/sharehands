@@ -16,9 +16,9 @@
     <div id="wrap">
     {>"public/templates/inc/header" /}
 
-    
+        <div class="container">
             {>"public/templates/{viewName}.dust"/}
-       
+       </div>
     {>"public/templates/inc/footer" /}
 
     <div>

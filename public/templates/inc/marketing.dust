@@ -5,23 +5,23 @@
  </div>
  <div class="container" id="marketing">
         <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+        <div class="col-lg-4 thumbnail">
+          <span class="glyphicon glyphicon-pencil"></span>
           <h2>Register</h2>
           <p>Register as a school or student to share what you are looking for...</p>
-          <p><a class="btn btn-primary" href="/register">Register</a></p>
+          <p><a class="btn btn-success btn-lg" href="/register">Register</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+        <div class="col-lg-4 thumbnail">
+          <span class="glyphicon glyphicon-bullhorn"></span>
           <h2>Share</h2>
-          <p>Sahre with local if you have some stuff to give away or have it...</p>
-          <p><a class="btn btn-primary" href="/post">Share</a></p>
+          <p>Share with local if you have some stuff to give away or have it...</p>
+          <p><a class="btn btn-success btn-lg" href="/post">Share</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+        <div class="col-lg-4 thumbnail">
+          <span class="glyphicon glyphicon-search"></span>
           <h2>Help</h2>
           <p>See what students are looking for nearby and share them what you can....</p>
-          <p><a class="btn btn-primary" href="/view/map">Explore</a></p>
+          <p><a class="btn btn-success btn-lg" href="/view/map">Explore</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
        
