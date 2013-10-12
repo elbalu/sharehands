@@ -1,8 +1,11 @@
 <div class="well" id="mapPost">
-	{.|js}
+	
 	<article>
       <p>Finding your location: <span id="status">checking...</span></p>
     </article>
+
+
+    <div id="mapInfo" style="display:none">{.|js}</div>
 	<div id="mapcanvas"></div>
 	<div id="status"></div>
 
