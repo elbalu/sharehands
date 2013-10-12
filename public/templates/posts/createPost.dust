@@ -1,44 +1,58 @@
-<div class="well" id="createPost">
+<div class="well row" id="createPost">
 	{!<article>
       <p>Finding your location: <span id="status">checking...</span></p>
     </article>
 	<div id="mapcanvas"></div>
 	<div id="status"></div>!}
+	<div class="col-md-8">
+		<img src="../img/post.jpg" class="img-thumbnail visible-lg" />
+	</div>
+	<div class="col-md-4">
 
-	<form role="form" action="/createPost" method="post">
-	  <input type="hidden" name="accountType" value="org"/>
+		
 
-	  <div class="form-group">
-	    <label for="postTitle">Title</label>
-	    <input type="text" class="form-control" id="postTitle" name="title" placeholder="Enter title">
-	  </div>
-	  <div class="form-group">
-	    <label for="postLat">Lat</label>
-	    <input type="text" class="form-control" id="postLat" name="latitude" placeholder="Lat">
-	  </div>
-	  <div class="form-group">
-	    <label for="postLng">Lat</label>
-	    <input type="text" class="form-control" id="postLng" name="longitude" placeholder="Lng">
-	  </div>
-	  <div class="form-group">
-	    <label for="postEmail">Lat</label>
-	    <input type="text" class="form-control" id="postEmail" name="email" placeholder="email" value={data.email}>
-	  </div>
-	  <div class="radio">
-		  <label>
-		    <input type="radio" name="type" id="optionsRadios1" value="want" checked>Want
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="type" id="optionsRadios2" value="have">Have
-		  </label>
-		</div>
-	  <div class="form-group">
-	    <label for="postDesc">Lat</label>
-	    <input type="text" class="form-control" id="postDesc" name="desc" placeholder="Description">
-	  </div>
 
-		  <button type="submit" class="btn btn-primary btn-lg btn-block">Want It</button>
-	</form>
+		<form role="form" action="/createPost" method="post">
+		  <input type="hidden" name="accountType" value="org"/>
+		   <div class="btn-group btn-group-lg" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="type" id="optionsRadios1" value="want" checked>We or I Need Help
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="type" id="optionsRadios2" value="have">&nbsp;Ready To Help
+			  </label>
+			 </div>
+			 <br/><br/>
+		  <div class="form-group">
+		    <label for="postTitle">Title of the post</label>
+		    <input type="text" class="form-control" id="postTitle" name="title" placeholder="I want or can ...">
+		  </div>
+
+		  <input type="hidden" class="form-control" id="postLat" name="latitude" placeholder="Lat">
+		  <input type="hidden" class="form-control" id="postLng" name="longitude" placeholder="Lng">
+		  {!
+		  <div class="form-group">
+		    <label for="postLat">Lat</label>
+		    <input type="hidden" class="form-control" id="postLat" name="latitude" placeholder="Lat">
+		  </div>
+		  <div class="form-group">
+		    <label for="postLng">Lat</label>
+		    <input type="text" class="form-control" id="postLng" name="longitude" placeholder="Lng">
+		  </div>
+		  !}
+		  <div class="form-group">
+		    <label for="postEmail">Email address</label>
+		    <input type="text" class="form-control" id="postEmail" name="email" placeholder="user@example.com" value={data.email}>
+		  </div>
+		 
+		  <div class="form-group">
+		    <label for="postDesc">Briefly describe your need/contribution</label>
+		    <textarea rows="6" cols="50" class="form-control" id="postDesc" name="desc">
+			</textarea>
+		    
+		  </div>
+
+			  <button type="submit" class="btn btn-primary btn-lg btn-block">Want It</button>
+		</form>
+	</div>
 </div>
