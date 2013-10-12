@@ -71,16 +71,23 @@ define([
 					      position: new google.maps.LatLng(x[i].latitude,x[i].longitude),
 					      map: map, 
 					      title: x[i].title,
-					      icon: x[i].type == "have" ? "/img/haveMarker.png" : "/img/wantMarker.png"
+					      icon: x[i].type == "have" ? "/img/haveMarker.png" : "/img/wantMarker.png",
+					      desc: x[i].desc,
+					      email: x[i].email,
+					      recType: x[i].type
 						  });
 					  	attachMessage(marker, i, x[i].desc, x[i]._id);
 					}
 
 					function attachMessage(marker, num, message, id){
 						var infoWindow = new google.maps.InfoWindow({
-				    		content: "<a href='/getPost/"+ id +"'>" + message + "</a>"
+				    		//content: "<a data-toggle='modal' href='/getPost/"+ id +"'>" + message + "</a>"
+				    		content: "<a data-toggle='modal' href='#myModal'>" + message + "</a>"
 						});
 					  	google.maps.event.addListener(marker, 'click', function () {
+					  		$("#modalTitle").html(marker.title);
+					  		$("#modalBody").html("<p><strong>Detailed Information: </strong>"+marker.desc+"</p><p><strong>Email Address: </strong>"+marker.email+"</p>");
+					  		$("#modalButton").html(marker.recType == "have" ? "This will help me" : "I will help");
 							infoWindow.open(marker.get('map'), marker);
 						});
 					}
