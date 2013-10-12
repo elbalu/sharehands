@@ -56,8 +56,14 @@ body {
 #listPost .thumbnail.post-want {
   border-top: 10px solid #DFF0D8;
 }
-#listPost .thumbnail.post-have {
+#listPost .thumbnail.post-have,
+#listPost .thumbnail.post-give {
   border-top: 10px solid #D9EDF7;
+}
+#listPost .thumbnail .btn-want {
+  background-color: #5CB85C;
+  border-color: #4CAE4C;
+  color: #FFFFFF;
 }
 #mapPost {
   height: 500px;
