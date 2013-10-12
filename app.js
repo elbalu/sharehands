@@ -8,7 +8,7 @@ var express = require('express'),
     dummyPosts = require('./mvc/model/dummyPosts');
     dust = require('dustjs-linkedin');
 
-require('dustjs-helpers');
+//require('dustjs-helpers');
 var config = require('./config');
 
 

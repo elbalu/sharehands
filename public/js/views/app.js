@@ -3,13 +3,12 @@ define([
         'underscore',
         'backbone',
         'bootstrap',
-        'dust',
-        'dustHelper'
-], function ($, _, Backbone, Bootstrap, Dust) {
+        'views/register'
+], function ($, _, Backbone, Bootstrap) {
 
     var AppView = Backbone.View.extend({
 
-        el: $("#wrapper"),
+        el: $("#wrap"),
         events: {
            
         },
@@ -17,7 +16,7 @@ define([
         initialize: function () {
            
            
-
+            console.log('init appjs');
         },
 
         render: function () {
