@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>{title}</title>
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="assets/css/docs.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/assets/css/docs.css" />
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -22,8 +22,9 @@
     {>"public/templates/inc/footer" /}
 
     <div>
-    <script data-main="js/main" src="js/lib/require-2.0.1.js"></script>
-    <script  src="assets/js/holder.js"></script>
+    <script data-main="/js/main" src="/js/lib/require-2.0.1.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script  src="/assets/js/holder.js"></script>
 
 </body>
 </html>

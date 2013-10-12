@@ -4,5 +4,4 @@
 	<h3>What you want to do next</h3>
 	<a href="/createPost" class="btn btn-primary btn-lg btn-block">Ask neighbours what you need</a>
 	<a href="/getPost/all/map" class="btn btn-success btn-lg btn-block">See what students need</a>
-
 </div>

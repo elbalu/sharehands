@@ -15,7 +15,7 @@
           <span class="glyphicon glyphicon-bullhorn"></span>
           <h2>Share</h2>
           <p>Share with local if you have some stuff to give away or have it...</p>
-          <p><a class="btn btn-success btn-lg" href="/post">Share</a></p>
+          <p><a class="btn btn-success btn-lg" href="/createPost">Share</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 thumbnail">
           <span class="glyphicon glyphicon-search"></span>

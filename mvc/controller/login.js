@@ -19,4 +19,12 @@ exports = module.exports = function (server) {
 	server.post('/login', function (req, res) {
 		res.redirect("/createPost");
 	});
+
+	 server.get('/logout', function (req, res) {
+        var session = req.session,
+            user = session.user;
+        req.logOut();
+        delete session.user;
+        res.redirect('/');
+    });
 };
