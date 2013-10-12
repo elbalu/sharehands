@@ -4,7 +4,7 @@
     </article>
 
 
-    <div id="mapInfo" style="display:none">{.|js}</div>
+    <div id="mapInfo">{data.posts|js}</div>
 	<div id="mapcanvas"></div>
 	<div id="status"></div>
 
