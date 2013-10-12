@@ -1,8 +1,19 @@
 <div class="well" id="register">
-	<h3>Register yourself if you need help from neighbours</h3>
-	<a href="/register/org" class="btn btn-primary btn-lg btn-block">Register as Org</a>
-	<a href="/register/student" class="btn btn-success btn-lg btn-block">Register as Student</a>
+	<h3>Register - Spread the magic of helping! </h3>
+	<div class="row">
+	
 
-<div id="map"></div>
-
+		<div class="col-md-6">
+			<a href="/register/student"><img src="../img/student.jpg" class="img-thumbnail visible-lg" /></a>
+			<p style="margin-top:10px">
+			<a href="/register/student" class="btn btn-success btn-lg btn-block">Register as Student</a>
+		</p>
+		</div>
+		<div class="col-md-6">
+			<a href="/register/org"><img src="../img/org.jpg" class="img-thumbnail visible-lg" style="height:345px" /></a>
+			<p style="margin-top:10px">
+		<a href="/register/org" class="btn btn-primary btn-lg btn-block">Register as Org</a>
+	</p>
+		</div>
+	</div>
 </div>
