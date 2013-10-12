@@ -47,7 +47,7 @@ define([
 				  var mapcanvas = document.createElement('div');
 				  mapcanvas.id = 'mapcanvas';
 				  mapcanvas.style.height = '400px';
-				  mapcanvas.style.width = '560px';
+				  mapcanvas.style.width = 'auto';
 				    
 				  document.querySelector('article').appendChild(mapcanvas);
 
@@ -55,7 +55,7 @@ define([
 				  var latlng1 = new google.maps.LatLng(position.coords.latitude+0.01, position.coords.longitude+0.01);
 
 				  var myOptions = {
-				    zoom: 12,
+				    zoom: 11,
 				    center: latlng,
 				    mapTypeControl: false,
 				    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},

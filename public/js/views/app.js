@@ -26,8 +26,8 @@ define([
 
         processListItem: function (e) {
             var el = e.target,
-            pEl = $(el).closest(".listBox");
-            
+            //pEl = $(el).closest(".listBox");
+            pEl.style("opacity","0.35");
         },
        
         proceedInnerLink: function (e) {

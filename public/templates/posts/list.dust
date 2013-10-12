@@ -2,10 +2,16 @@
 	<div class="row">
 	{#data.posts}
 
-  <img src=""/>
+  <div id="loadInfo">
+  <img id="" src="/img/loading.png" height="64" width="64"/>
+  <span class="loadText" id="loadText">Loading...</span>
+  <img id="" src="/img/loading.png" height="64" width="64"/>
+  <span class="completeText" id="completeText">Completed...</span>
+  </div>
+
 	
 	<div class="col-sm-6 col-md-3 post-{type} listBox">
-		<div class="thumbnail">
+		<div class="thumbnail post-{type}">
     		<img src="/img/{imgUrl}">
     		<div class="caption">
     			<h3>{title}</h3>
