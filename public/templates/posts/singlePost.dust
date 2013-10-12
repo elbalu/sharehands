@@ -14,7 +14,7 @@
     <label for="orgEmail">Contact: {email}</label>
   </div>
 
-	  <button type="submit" class="btn btn-primary btn-lg btn-block">I {type} it!</button>
+	  <button type="submit" class="btn btn-primary btn-lg btn-block">I will help!</button>
     {/data.post}
 </form>
 </div>
