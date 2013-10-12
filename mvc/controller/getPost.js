@@ -54,11 +54,30 @@ exports = module.exports = function (server) {
 					res.json(model);
 				} else {
 					
-					var model = {status : 'success', post: post};
-					res.json(model);
+					var model = { 
+						viewName: 'posts/singlePost',
+						master: 'public/templates/master',
+						status : 'success', 
+						post: post
+					};
+					//res.json(model);
+					res.render(model.master, model);
 				}
 
 			});
+		
+    });
+    server.post('/post/request', function (req, res) {
+		var id = req.params.id;
+					var model = { 
+						viewName: 'posts/success',
+						master: 'public/templates/master'
+					};
+					//res.json(model);
+					res.render(model.master, model);
+				
+
+			
 		
     });
 

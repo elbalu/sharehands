@@ -1,17 +1,22 @@
-<div class="well">
-	<h3>Login</h3>
-	<a href="/fbauth" class="btn btn-primary btn-lg btn-block">Login With FaceBook</a>
-	<hr/>
-	<form role="form" action="/login" method="post">
-	  <input type="hidden" name="student" value="student"/>
-	  <div class="form-group">
-	    <label for="loginEmail">Email address</label>
-	    <input type="email" class="form-control" id="loginEmail" name="email"  placeholder="Enter email" required>
-	  </div>
-	  <div class="form-group">
-	    <label for="loginPassword">Password</label>
-	    <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter password" required>
-	  </div>
-		  <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
-	</form>
-<div>
+<div class="well row">
+	<div class="col-md-8">
+		<img src="../img/login.jpg" class="img-thumbnail visible-lg" />
+	</div>
+	<div class="col-md-4">
+		<h3>Login</h3>
+		<a href="/fbauth" class="btn btn-primary btn-lg btn-block">Login With FaceBook</a>
+		<hr/>
+		<form role="form" action="/login" method="post">
+		  <input type="hidden" name="student" value="student"/>
+		  <div class="form-group">
+		    <label for="loginEmail">Email address</label>
+		    <input type="email" class="form-control" id="loginEmail" name="email"  placeholder="Enter email" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="loginPassword">Password</label>
+		    <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter password" required>
+		  </div>
+			  <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+		</form>	
+	</div>
+</div>

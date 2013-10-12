@@ -40,3 +40,16 @@ body {
     padding-top: 60px;
   }
 }
+#listPost .alert-want {
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  color: #468847;
+}
+#listPost .alert-have {
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  color: #3A87AD;
+}
+#listPost a.alert {
+  display: block;
+}
