@@ -1,8 +1,10 @@
 <div class="well" id="listPost">
 	<div class="row">
 	{#data.posts}
+
+  <img src=""/>
 	
-	<div class="col-sm-6 col-md-3 post-{type}">
+	<div class="col-sm-6 col-md-3 post-{type} listBox">
 		<div class="thumbnail">
     		<img src="/img/{imgUrl}">
     		<div class="caption">
@@ -10,7 +12,7 @@
     			<p>
       				<strong>{email}</strong>&#160;{type}&#160;{title}
       			</p>
-      			<button type="submit" class="btn btn-primary btn-lg btn-block">{buttonAction}</button>
+      			<button type="submit" class="listButton btn btn-primary btn-lg btn-block">{buttonAction}</button>
   			</div>
   		</div>
   	</div>
